@@ -1,0 +1,32 @@
+<p>home works!</p>
+
+{{title|uppercase}}
+
+<div [style.backgroundColor]="color"> propertyBinding </div>
+<br>
+<input type="submit" value="say hello" (click)="alert()">
+
+<br>
+
+<input type="text" [(ngModel)]="color">
+
+<table border="2">
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>price</th>
+        <th>quantity</th>
+        <th>like</th>
+        <th>actons</th>
+    </tr>
+    <tr *ngFor="let product of listProduct; let i=index">
+        <td>{{product.id}}</td>
+        <td>{{product.title}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.like}}</td>
+        <td><button (click)="increment(i)">like</button></td>
+        <td><button (click)="buy(i)" [disabled]="product.quantity==0">buy</button></td>
+
+    </tr>
+</table>
