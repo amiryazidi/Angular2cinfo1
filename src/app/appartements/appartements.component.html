@@ -1,0 +1,28 @@
+<div *ngIf="list?.length!=0 ">
+    <h1>Appartements</h1>
+
+    <input type="text" [(ngModel)]="searchApart" placeholder="tt">
+    <table class="table " border="2 ">
+        <tr>
+            <th scope="col ">id</th>
+            <th scope="col ">appartNum</th>
+            <th scope="col ">floorNum</th>
+            <th scope="col ">surface</th>
+            <th scope="col ">terrace</th>
+            <th>action</th>
+        </tr>
+        <tr *ngFor="let app of list; let i=index ">
+            <ng-container *ngIf="app.surface==searchApart || !searchApart">
+                <td>{{app.id}}</td>
+                <td>{{app.appartNum}}</td>
+                <td>{{app.floorNum}}</td>
+                <td>{{app.surface}}</td>
+                <td>{{app.terrace}}</td>
+                <td><button (click)="likeappart(app.id)">Like</button></td>
+            </ng-container>
+        </tr>
+    </table>
+</div>
+<ng-container>
+    <p *ngIf="list?.length===0"> No Appartements</p>
+</ng-container>

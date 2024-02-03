@@ -10,6 +10,7 @@ import { ResidencesComponent } from './residences/residences.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailProdComponent } from './detail-prod/detail-prod.component';
+import { AppartementsComponent } from './appartements/appartements.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DetailProdComponent } from './detail-prod/detail-prod.component';
     ResidencesComponent,
     NavbarComponent,
     NotFoundComponent,
-    DetailProdComponent
+    DetailProdComponent,
+    AppartementsComponent
   ],
   imports: [
     BrowserModule,
