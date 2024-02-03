@@ -10,7 +10,7 @@ export class HomeComponent {
 title!:string
 listProduct!:Product[]
 color!:string
-priceMax!:number
+priceMax:number=5
 ngOnInit(){
   this.title="Welcome 2CINFO1"
   this.color="";
