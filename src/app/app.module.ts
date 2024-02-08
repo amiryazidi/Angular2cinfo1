@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TestComponent } from './test/test.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResidencesComponent } from './residences/residences.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailProdComponent } from './detail-prod/detail-prod.component';
 import { AppartementsComponent } from './appartements/appartements.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,15 @@ import { AppartementsComponent } from './appartements/appartements.component';
     NavbarComponent,
     NotFoundComponent,
     DetailProdComponent,
-    AppartementsComponent
+    AppartementsComponent,
+    AddProductComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

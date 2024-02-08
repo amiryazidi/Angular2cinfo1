@@ -1,0 +1,24 @@
+<label>Login</label>
+<input type="text" [formControl]="login">
+
+<label>password</label>
+<input type="text" [formControl]="password">
+
+<input type="submit" value="save" (click)="showLogin()" [disabled]="login.invalid || password.invalid">
+
+<br>
+<h1>formGroup</h1>
+
+
+<form [formGroup]="registerForm" class="form-group">
+    <label>last Name</label>
+    <input type="text" formControlName="ln" class="form-control">
+
+    <label>First Name</label>
+    <input type="text" formControlName="fn" class="form-control">
+
+    <input class="btn btn-info" type="submit" value="save" (click)="showForm()" [disabled]="registerForm.invalid">
+    <input class="btn btn-danger" type="submit" value="reset" (click)="reset()">
+
+
+</form>
