@@ -16,6 +16,14 @@
 
     <label>First Name</label>
     <input type="text" formControlName="fn" class="form-control">
+    <div class="alert alert-danger" *ngIf="registerForm.controls['fn'].touched">
+        <div *ngIf="registerForm.get('fn')?.hasError('required')">
+            the first name is a required field
+        </div>
+        <div *ngIf="registerForm.get('fn')?.hasError('minlength')">
+            the first name minLength is 3
+        </div>
+    </div>
 
     <input class="btn btn-info" type="submit" value="save" (click)="showForm()" [disabled]="registerForm.invalid">
     <input class="btn btn-danger" type="submit" value="reset" (click)="reset()">

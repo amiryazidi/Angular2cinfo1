@@ -7,10 +7,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactive-form.component.css']
 })
 export class ReactiveFormComponent {
-  login= new FormControl('',Validators.required);
+  login= new FormControl('ahmed',Validators.required);
   password= new FormControl('', Validators.required);
   showLogin(){
-    console.log(this.login.value);
+    console.log(this.login);
+    console.log(this.password);
   }
 
   registerForm !: FormGroup;

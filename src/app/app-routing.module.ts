@@ -6,11 +6,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailProdComponent } from './detail-prod/detail-prod.component';
 import { AppartementsComponent } from './appartements/appartements.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/product',pathMatch:'full'},
   {path:'product',component:HomeComponent},
   {path:'login',component:ReactiveFormComponent},
+  {path:'addProduct',component:AddProductComponent},
   {path:'residences',component:ResidencesComponent},
   {path:'product/:id',component:DetailProdComponent},
   {path:'appartement/:id',component:AppartementsComponent},
