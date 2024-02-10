@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-add-product',
@@ -7,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent {
+   constructor(private ps:ProductService){}
     registerForm= new FormGroup({
       id: new FormControl('',Validators.required),
       price: new FormControl('',[ Validators.required,Validators.pattern("^[0-9]*$")]),
@@ -17,5 +19,6 @@ export class AddProductComponent {
 
      ajouter(){
       console.log(this.registerForm.value);
+      this.ps.addProduct(this.registerForm.value as any);
      }
 }
