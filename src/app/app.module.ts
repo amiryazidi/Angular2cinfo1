@@ -13,6 +13,9 @@ import { DetailProdComponent } from './detail-prod/detail-prod.component';
 import { AppartementsComponent } from './appartements/appartements.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TvComponent } from './tv/tv.component';
+import { MobileComponent } from './mobile/mobile.component';
+import { ShowOneProductComponent } from './show-one-product/show-one-product.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     DetailProdComponent,
     AppartementsComponent,
     AddProductComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    TvComponent,
+    MobileComponent,
+    ShowOneProductComponent
   ],
   imports: [
     BrowserModule,

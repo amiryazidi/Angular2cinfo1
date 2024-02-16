@@ -7,12 +7,16 @@ import { DetailProdComponent } from './detail-prod/detail-prod.component';
 import { AppartementsComponent } from './appartements/appartements.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { MobileComponent } from './mobile/mobile.component';
+import { TvComponent } from './tv/tv.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/product',pathMatch:'full'},
   {path:'product',component:HomeComponent},
   {path:'login',component:ReactiveFormComponent},
   {path:'addProduct',component:AddProductComponent},
+  {path:'mobile',component:MobileComponent},
+  {path:'tv',component:TvComponent},
   {path:'residences',component:ResidencesComponent},
   {path:'product/:id',component:DetailProdComponent},
   {path:'appartement/:id',component:AppartementsComponent},

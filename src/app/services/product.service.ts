@@ -20,14 +20,14 @@ export class ProductService {
       id:2,
       title:"Iphone 11",
       price:150,
-      quantity:1,
+      quantity:0,
       like:0
     },
     {
       id:3,
       title:"Iphone X",
       price:100,
-      quantity:3,
+      quantity:0,
       like:0
     },
     {
