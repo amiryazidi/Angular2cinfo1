@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Product } from '../model/product';
 import { ProductService } from '../services/product.service';
 import { CalculService } from '../services/calcul.service';
+import { ConsumerProductService } from '../services/consumer-product.service';
 
 @Component({
   selector: 'app-home',
@@ -15,11 +16,14 @@ color!:string
 priceMax:number=5
 Stock!:number
 
-constructor(private SP:ProductService,private cl : CalculService){}
+constructor(private SP:ProductService,private cl : CalculService,private consP:ConsumerProductService){}
 ngOnInit(){
   this.title="Welcome 2CINFO1"
   this.color="";
-  this.listProduct=this.SP.listProduct
+ // this.listProduct=this.SP.listProduct
+ this.consP.getProducts().subscribe(
+  (data)=>this.listProduct=data
+ )
   this.Stock=this.cl.stat(this.listProduct,'quantity',0)
 }
 alert(){
@@ -34,5 +38,4 @@ buy(i:number){
   this.listProduct[i].quantity--;
 
 }
-
 }

@@ -30,10 +30,12 @@
             <td>{{product.quantity}}</td>
             <td>{{product.like}}</td>
             <td>
-                <button class="btn btn-primary" (click)=" increment(i) ">like</button></td>
+                <button class="btn btn-primary" (click)=" increment(i) ">like</button>
+            </td>
             <td><button class="btn btn-dark" (click)="buy(i) " [disabled]="product.quantity==0 ">buy</button></td>
             <td>
-                <button class="btn btn-info" [routerLink]="['/product',product.id]">show</button></td>
+                <button class="btn btn-info" [routerLink]="['/product',product.id]">show</button>
+            </td>
         </ng-container>
     </tr>
 </table>

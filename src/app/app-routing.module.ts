@@ -19,7 +19,6 @@ const routes: Routes = [
   {path:'tv',component:TvComponent},
   {path:'residences',component:ResidencesComponent},
   {path:'product/:id',component:DetailProdComponent},
-  {path:'appartement/:id',component:AppartementsComponent},
   {path:'**',component:NotFoundComponent},
 ];
 
