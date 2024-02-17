@@ -9,6 +9,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { TvComponent } from './tv/tv.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/product',pathMatch:'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'tv',component:TvComponent},
   {path:'residences',component:ResidencesComponent},
   {path:'product/:id',component:DetailProdComponent},
+  {path:'update/:id',component:UpdateProductComponent},
   {path:'**',component:NotFoundComponent},
 ];
 

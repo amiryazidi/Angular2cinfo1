@@ -1,0 +1,48 @@
+<p>update-product works!</p>
+<p>add-product works!</p>
+<form [formGroup]="registerForm">
+    <div class="form-group">
+        <label>Id :</label>
+        <input type="number" formControlName="id" class="form-control">
+    </div>
+    <div class="alert alert-danger" *ngIf="registerForm.get('id')?.invalid && registerForm.get('id')?.touched">
+        <div> id required</div>
+    </div>
+
+    <div class="form-group">
+        <label>Title :</label>
+        <input type="text" formControlName="title" class="form-control">
+    </div>
+    <div class="alert alert-danger" *ngIf="registerForm.get('title')?.invalid && registerForm.get('title')?.touched">
+        <div *ngIf="registerForm.get('title')?.hasError('required')"> title required </div>
+        <div *ngIf="registerForm.get('title')?.hasError('minlength')"> title minlenght 3 </div>
+    </div>
+
+    <div class=" form-group ">
+        <label>price :</label>
+        <input type="number " formControlName="price" class="form-control ">
+    </div>
+    <div class="alert alert-danger " *ngIf="registerForm.get('price')?.invalid && registerForm.get('price')?.touched ">
+        <div *ngIf="registerForm.get('price')?.hasError('required')"> price required</div>
+        <div *ngIf="registerForm.get('price')?.hasError('pattern')"> price positive</div>
+
+    </div>
+
+    <div class="form-group ">
+        <label>quantity :</label>
+        <input type="number " formControlName="quantity" class="form-control ">
+    </div>
+    <div class="alert alert-danger " *ngIf="registerForm.get('quantity')?.invalid && registerForm.get('quantity')?.touched ">
+        <div> quantity required</div>
+    </div>
+
+    <div class="form-group ">
+        <label>like :</label>
+        <input type="number " formControlName="like" class="form-control ">
+    </div>
+    <div class="alert alert-danger " *ngIf="registerForm.get('like')?.invalid && registerForm.get('like')?.touched ">
+        <div> like required</div>
+    </div>
+
+    <input class="btn btn-info" type="submit" [disabled]="registerForm.invalid" (click)="update()">
+</form>

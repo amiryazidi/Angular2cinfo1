@@ -38,4 +38,9 @@ buy(i:number){
   this.listProduct[i].quantity--;
 
 }
+supp(id:number){
+  this.consP.deleteProduct(id).subscribe(
+    ()=>this.ngOnInit()
+  )
+}
 }

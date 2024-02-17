@@ -14,7 +14,7 @@ export class AddProductComponent {
   constructor(
     private ps: ProductService,
     private route: Router,
-    private conP: ConsumerProductService
+    private consP:ConsumerProductService
   ) {}
   registerForm = new FormGroup({
     id: new FormControl('', Validators.required),
@@ -29,10 +29,12 @@ export class AddProductComponent {
 
   ajouter() {
     console.log(this.registerForm.value);
-       this.ps.addProduct(this.registerForm.value as any);
-       this.route.navigate(['product']);
-    //   this.route.navigateByUrl('/product')
-
+    //    this.ps.addProduct(this.registerForm.value as any);
+    //    this.route.navigate(['product']);
+    // //   this.route.navigateByUrl('/product')
+    this.consP.addProduct(this.registerForm.value as any).subscribe({
+      next:()=>this.route.navigateByUrl('/product')
+    })
 
   }
 }
